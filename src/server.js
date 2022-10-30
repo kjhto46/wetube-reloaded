@@ -5,7 +5,7 @@ const PORT = 4000;
 const app = express();
 
 const handleHome = (req, res) => {
-  return res.send("I still love you.");
+  return res.send("<h1>안녕하세요</h1>");
 };
 
 const handleLogin = (req, res) => {
