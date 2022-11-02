@@ -12,7 +12,7 @@ const home = (req, res) => {
 const login = (req, res) => {
   return res.send("login");
 };
-console.log("hello");
+
 app.use(logger);
 app.get("/", home);
 app.get("/login", login);
