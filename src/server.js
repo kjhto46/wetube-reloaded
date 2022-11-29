@@ -11,8 +11,8 @@ const logger = morgan("dev");
 
 // 라우터 추가
 app.use("/", globalRouter);
-app.use("/users", userRouter);
 app.use("/videos", videoRouter);
+app.use("/users", userRouter);
 
 app.use(logger);
 
