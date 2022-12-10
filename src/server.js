@@ -10,11 +10,11 @@ const app = express();
 const logger = morgan("dev");
 
 // 라우터 추가
+app.set("view engine", "pug");
+app.use(logger);
 app.use("/", globalRouter);
 app.use("/videos", videoRouter);
 app.use("/users", userRouter);
-
-app.use(logger);
 
 const handleListening = () =>
   console.log(`✅ Server listenting on port http://localhost:${PORT} 🚀`);
