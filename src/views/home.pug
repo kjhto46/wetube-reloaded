@@ -2,3 +2,8 @@ extends base.pug
 
 block content
     h2 환영해요. 인기 급상승 동영상들이 있어요. 
+    ul
+        each video in videos
+            li=video
+        else 
+            li 죄송합니다 불러올 내용이 없네요.
