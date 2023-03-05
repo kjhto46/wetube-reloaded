@@ -50,6 +50,15 @@ export const getUpload = (req, res) => {
 }
 
 export const postUpload = (req, res) => {
-  // 이곳에 비디오를 videos array에 추가할 예정
+  const { title } = req.body;
+  const newVideo = {
+      title,
+      rating: 0,
+      comments: 0,
+      createdAt: "방금전",
+      views: 0,
+      id: videos.length + 1,
+    };
+    videos.push(newVideo); 
   return res.redirect("/");
 }
